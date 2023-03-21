@@ -1,0 +1,15 @@
+Los comandos que reciben y envian mensajes se les añadio al final del mensaje el id del canal
+del cual se recibieron los mensajes, asi se puede responder por el respectivo canal.
+
+Esto se ve reflejado en:
+
+-bot.py : En las funciones callback y write anidadas en la funcion writer.
+-bot.py : En los comandos birthday y redditimg(funciones birthday y post_image)
+-manager.py : Funcion callback cuando se recibe el string #birthday, antes de enviar el mensaje por rabbitMQ
+-prawComponent.py : Funcion callback al recibir el string #redditimg, antes de enviar el mensaje por rabbitMQ
+
+NOTA: Debera crear un archivo de entorno .env que contenga las siguientes variables:
+
+DISCORD_TOKEN : Proporcionado por el portal de aplicaciones de Discord durante el desarrollo de aplicaciones.
+DISCORD_GUILD : La Guild de Discord en la cual estara principalmente el bot.
+

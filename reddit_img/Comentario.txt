@@ -1,0 +1,17 @@
+El componente prawComponent recibe un mensaje y envia un enlace a travez de RabbitMQ al Bot de Discord.
+El enlace es elegido aleatoriamente de una lista de enlaces extraidos de un subreddit elegido de manera aleatoria de una seleccion.
+Todos los enlaces extraidos contienen al menos alguna imagen.
+
+El componente creado utiliza la libreria Python-Reddit Application Wrapper(PRAW) para facilitar el
+acceso y busqueda de informacion en reddit.
+
+NOTA : Si quiere que el programa funcione, cree su propio archivo de entorno .env
+con las siguientes variables:
+
+REDDIT_CLIENT_ID
+REDDIT_CLIENT_SECRET
+
+Tendra que crearse una cuenta en reddit para acceder a la seccion de aplicaciones.
+
+El contenido de estas variables debera llenarla con los respectivos Client ID y Client Secret
+proporcionados por la seccion de aplicaciones en su cuenta de reddit al desarrollar una aplicacion.
